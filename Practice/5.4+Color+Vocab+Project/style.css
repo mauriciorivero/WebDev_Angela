@@ -1,0 +1,30 @@
+
+.color-title{
+    font-weight: normal;
+}
+
+
+#titulo_rojo{
+    color: red;
+}
+
+#titulo_azul{
+    color: blue;
+}
+
+#titulo_naranja{
+    color: orange;
+}
+
+#titulo_verde{
+    color: green;
+}
+
+#titulo_amarillo{
+    color: yellow;
+}
+
+img{
+    height: 200px;
+    width: 200px;
+}

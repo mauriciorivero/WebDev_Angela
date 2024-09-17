@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: antiquewhite;
+}
+
+header{
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+header h1{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50%;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5%;
+    width: 100vw;
+}
+
+.meme-card{
+    align-items: center;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    padding: 2%;
+    width: 30%;
+}
+
+.meme-card img{
+    border: solid white 2px;
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+.meme-card h2{
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 30px;
+    margin-bottom: 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.meme-card p{
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 15px;
+    text-align: center;
+}

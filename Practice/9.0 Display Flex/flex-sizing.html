@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Sizing</title>
+    <style>
+        body{
+            background-color: lightgray;
+        }
+        section{
+            background-color: grey;
+            display: flex;
+            gap: 5px;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        section > div{
+            background-color: blue;
+            border: solid 2px white;
+            color: white;
+            padding: 20px;
+        }
+
+        .item1{
+            flex-basis: 200px;
+        }
+
+        .item2{
+            flex-basis: 200px;
+        }
+
+        .item3{
+            flex-basis: 400px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="item1">Item 1: 200px</div>
+        <div class="item2">Item 2: 200px</div>
+        <div class="item3">Item 3: 400px</div>
+    </section>
+</body>
+</html>

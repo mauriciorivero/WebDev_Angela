@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown{
+            position: relative;
+        }
+
+        .dropdown-content{
+            display: none;
+            position: absolute;
+        }
+
+        .dropdown input[type="checkbox"]:checked ~ .dropdown-content{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <input id="dropdown-toggle" type="checkbox" aria-hidden="true" hidden>
+        <label for="dropdown-toggle" aria-haspopup="true" aria-expanded="flase">Mostrár Menú</label>
+        <nav class="dropdown-content" aria-label="submenu">
+            <a href="#" role="menuitem">Enlace 1</a>
+            <a href="#" role="menuitem">Enlace 2</a>
+            <a href="#" role="menuitem">Enlace 3</a>
+        </nav>
+    </div>
+</body>
+</html>

@@ -1,0 +1,250 @@
+*{
+    --white-1: #FFFFFF;
+    --white-2: #FEFEFE;
+    --white-3: #FAFAFA;
+    --gray-1: #F1F1F1;
+    --gray-2: #EEEEEE;
+    --gray-3: #454549;
+    --gray-4: #242429;
+    --black-1: #342E58;
+    --blue-1: #2258C0;
+    --blue-2: #89D5E3;
+    --blue-3: #E5EEFF;
+    --green-1: #14B440;
+    --green-2: #7AF233;
+    --red-1: #F14444;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding: 10rem;
+    width: 100vw;
+}
+
+.applecardashboard{
+    display: grid;
+    background-color: var(--gray-4);
+    border-radius: 3rem;
+    gap: 2rem;
+    grid-template-columns: 15rem minmax(50rem, auto) minmax(40rem, auto);
+    grid-template-rows: minmax(20rem, auto) minmax(20rem, auto) minmax(20rem, auto);
+    height: 73vh;
+    overflow: hidden;
+    padding: 0rem;
+    width: 80vw;
+}
+
+.applecardashboard_item{
+    background-color: var(--gray-3);
+}
+
+.dock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-row: span 3;
+    padding: 0;
+    width: 100%;
+}
+
+.option-container{
+    border-radius: 2rem;
+    margin-right: 2rem;
+}
+.direction{
+    margin-top: 2rem;
+}
+
+.calendar{
+    margin-bottom: 2rem;
+}
+
+.applecardashboard_options{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.applecardashboard_tray{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+}
+
+.applecardashboard_tray div{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.applecardashboard_tray div:nth-child(2){
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.applecardashboard_tray div img{
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+}
+
+.applecardashboard_tray div p{
+    color: var(--white-3);   
+    font-family: "Roboto", sans-serif;
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+}
+
+.applecardashboard_tray div:nth-child(3) img{
+    height: 7rem;
+    width: 7rem;
+}
+
+.applecardashboard_apps{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.applecardashboard_apps img{
+    border-radius: 2rem;
+    cursor: pointer;
+    height: 8rem;
+    margin: 1rem;
+    overflow: hidden;
+    width: 8rem;
+}
+
+.applecardashboard_moreapps{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.applecardashboard_moreapps img{
+    cursor: pointer;
+    height: 7rem;
+    margin: 1rem;
+    margin-bottom: 3em;
+    width: 7rem;
+}
+
+.map-container{
+    align-items: center;
+    background: url("../img/waze-map.png") center/cover no-repeat;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    grid-row: span 3;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+.map-container div{
+    align-items: center;
+    background-color: var(--gray-3);
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    height: 8rem;
+    padding: 2rem;
+    width: 95%;
+}
+
+.map-container div p{
+    color: var(--white-3);   
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.direction{
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding: 3rem;
+}
+
+.direction img{
+    height: 7rem;
+    margin: 4rem;
+    width: 7rem;
+}
+
+.direction p{
+    color: var(--white-3);
+    font-family: "Roboto", sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.direction p:nth-child(2){
+    color: var(--blue-2);
+}
+
+.player{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem;
+}
+
+.player img{
+    border-radius: 1rem;
+    cursor: pointer;
+    height: 8rem;
+    width: 8rem;
+}
+
+.player img:nth-child(1){
+    height: 10rem;
+    width: 10rem;
+}
+
+.calendar{
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+.calendar img{
+    height: 10rem;
+    margin: 4rem;
+    text-align: left;
+    width: 10rem;
+}
+
+.calendar p{
+    color: var(--white-3);
+    font-family: "Roboto", sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.calendar p:nth-child(2){
+    font-size: 3rem;
+    font-weight: 300;
+}

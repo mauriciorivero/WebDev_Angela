@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    body{
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container{
+      background-color: black;
+      display: grid;
+      gap: 0.5rem;
+      grid-template-columns: 1fr 1.5fr 0.2fr;
+      grid-template-rows: 1.5fr 1fr 0.1fr;
+      height: 50vw;
+      width: 50vw;
+    }
+    .red{
+      background-color: #E72F24;
+    }
+    .cream{
+      background-color: #F0F1EC;
+    }
+    .yellow{
+      background-color: #F9D01E;
+    }
+
+    .blue{
+      background-color: #004592;
+    }
+
+    .negro{
+      background-color: #232629;
+    }
+
+    #segundo-cream{
+      grid-column: span 2;
+    }
+
+    .divsion-azul{
+      background-color: black;
+      display: grid;
+      gap: 1rem;
+      grid-row: span 2;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 1.5fr;
+    }
+
+    .divsion-amarillo{
+      background-color: black;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1.3fr 1fr;
+      grid-template-rows: auto;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+   <section class="container">
+     <div class="red"></div>
+     <div id="segundo-cream" class="cream"></div>
+     <div class="cream"></div>
+     <div class="cream"></div>
+     <div class="divsion-azul">
+      <div class="blue"></div>
+      <div class="cream"></div>
+     </div>
+     <div class="cream"></div>
+     <div class="divsion-amarillo">
+      <div class="yellow"></div>
+      <div class="negro"></div>
+     </div>
+   </section>
+</body>
+
+</html>
