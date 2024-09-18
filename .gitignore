@@ -1,0 +1,10 @@
+# Ignora archivos específicos
+.DS_Store
+WebDev_Angela.code-workspace
+
+# Ignora todos los archivos con cierta extensión
+*.log
+*.tmp
+
+# Ignora archivos en cualquier directorio con cierto nombre
+**/.DS_Store
