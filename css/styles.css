@@ -71,3 +71,66 @@ a{
     font-family: Montserrat-VariableFont_wght;
     font-size: 1.6rem;
 }
+
+.container-project {
+    display: grid;
+    gap: 2rem;
+    grid-auto-columns: 40rem;
+    grid-auto-rows: 30rem;
+    grid-template-rows: repeat(auto-fill, 30rem);
+    grid-template-columns: repeat(auto-fill, 40rem);
+    height: auto;
+    padding: 2rem;
+    width: auto;
+}
+
+.card-project{
+    align-items: center;
+    border: solid 0.2rem var(--mrd2-white);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30rem;
+    overflow: hidden;
+    padding: 2rem;
+    width: 40rem;
+}
+
+.card-project img{
+    border-radius: 0.8rem;
+    width: 100%;
+}
+
+.card-project div{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-project > div > h1{
+    color: var(--mrd2-yellow);
+    font-family: Montserrat-VariableFont_wght;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.card-project > div > p{
+    color: var(--mrd2-white);
+    font-family: Montserrat-VariableFont_wght;
+    font-size: 1.1rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.card-project > div > a{
+    color: var(--mrd2-white);
+    cursor: pointer;
+    font-family: Montserrat-VariableFont_wght;
+    font-size: 1.1rem;
+    font-weight: 200;
+    text-align: center;
+    text-decoration: none;
+}
