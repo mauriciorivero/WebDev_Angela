@@ -38,12 +38,17 @@ body{
 }
 
 header{
-    backdrop-filter: blur(5px);
-    position: sticky;
-    top: 0px;
+    align-items: center;
     animation: adjust-header linear both;
     animation-timeline: scroll();
     animation-range: 0 200px;
+    height: 4rem;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    position: sticky;
+    top: 0px;
 }
 
 @keyframes adjust-header{
@@ -55,7 +60,14 @@ header{
 }
 
 .title1{
+    color: var(--mrd2-white);
     font-family:Montserrat-VariableFont_wght;
     font-size: 3rem;
     font-weight: 700;
+}
+
+a{
+    color: var(--mrd2-orange);
+    font-family: Montserrat-VariableFont_wght;
+    font-size: 1.6rem;
 }
