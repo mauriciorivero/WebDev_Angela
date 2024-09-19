@@ -74,7 +74,7 @@ a{
 
 .container-project {
     display: grid;
-    gap: 2rem;
+    gap: 1rem;
     grid-auto-columns: 40rem;
     grid-auto-rows: 30rem;
     grid-template-rows: repeat(auto-fill, 30rem);
