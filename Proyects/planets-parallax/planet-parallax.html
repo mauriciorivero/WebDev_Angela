@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planets Parallax</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 300vh;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .planet {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+            will-change: transform;
+            transition: transform 0.1s ease-out;
+        }
+
+        #planet1 { background-image: url('images/planet1.png'); }
+        #planet2 { background-image: url('images/planet2.png'); }
+        #planet3 { background-image: url('images/planet3.png'); }
+        #planet4 { background-image: url('images/planet4.png'); }
+        #planet5 { background-image: url('images/planet5.png'); }
+        #planet6 { background-image: url('images/planet6.png'); }
+    </style>
+</head>
+<body>
+    <div id="planet1" class="planet"></div>
+    <div id="planet2" class="planet"></div>
+    <div id="planet3" class="planet"></div>
+    <div id="planet4" class="planet"></div>
+    <div id="planet5" class="planet"></div>
+    <div id="planet6" class="planet"></div>
+
+    <div class="content">
+        <!-- Add your grid content here -->
+        <div>Content 1</div>
+        <div>Content 2</div>
+        <div>Content 3</div>
+        <!-- ... more content ... -->
+    </div>
+
+    <script>
+        const planets = document.querySelectorAll('.planet');
+
+        function randomPosition(planet) {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            planet.style.left = `${x}px`;
+            planet.style.top = `${y}px`;
+        }
+
+        planets.forEach(randomPosition);
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            planets.forEach((planet, index) => {
+                const speed = 0.1 + (index * 0.02);
+                const yPos = -scrollY * speed;
+                planet.style.transform = `translateY(${yPos}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

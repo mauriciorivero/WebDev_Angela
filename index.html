@@ -12,6 +12,13 @@
         <h1 class="title1">Developer Portfolio</h1>
     </header>
 
+    <div id="planet1" class="planet"></div>
+    <div id="planet2" class="planet"></div>
+    <div id="planet3" class="planet"></div>
+    <div id="planet4" class="planet"></div>
+    <div id="planet5" class="planet"></div>
+    <div id="planet6" class="planet"></div>
+
     <main>
         <section class="card">
             <img src="covers/AppleCarplay.png" alt="Apple Carplay">
@@ -121,6 +128,27 @@
         </section>
     </main>
 
+    <script>
+        const planets = document.querySelectorAll('.planet');
+
+        function randomPosition(planet) {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            planet.style.left = `${x}px`;
+            planet.style.top = `${y}px`;
+        }
+
+        planets.forEach(randomPosition);
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            planets.forEach((planet, index) => {
+                const speed = 0.1 + (index * 0.02);
+                const yPos = -scrollY * speed;
+                planet.style.transform = `translateY(${yPos}px)`;
+            });
+        });
+    </script>
     
 </body>
 </html>
