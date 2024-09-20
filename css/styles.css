@@ -19,6 +19,15 @@
     --mrd2-orange: #F2A444;
     --mrd2-blackblue: #0A0140;
     --mrd2-redorange: #F24405;
+    --card-color: rgba(255, 255, 255, 0.1);
+    --text-color: #fff;
+    --glow-color: rgba(255, 255, 255, 0.3);
+
+    --border-width: 4px;
+    --border-radius: 1.6rem;
+    --color1: #ff00ff;
+    --color2: #00ffff;
+    --color3: #ffff00;
 }
 
   
@@ -34,6 +43,8 @@ html{
 
 body{
     background-color: var(--mrd2-black);
+    color: var(--text-color);
+    font-family: Montserrat-VariableFont_wght;
 }
 
 header{
@@ -48,6 +59,7 @@ header{
     padding: 2rem;
     position: sticky;
     top: 0px;
+    z-index: 2;
 }
 
 @keyframes adjust-header{
@@ -58,128 +70,113 @@ header{
     }
 }
 
-.title1{
-    color: var(--mrd2-white);
-    font-family:Montserrat-VariableFont_wght;
-    font-size: 3rem;
-    font-weight: 700;
+main{
+  display: grid;
+  gap: 4rem;
+  grid-auto-columns: 40rem;
+  grid-auto-rows: 30rem;
+  grid-template-rows: repeat(auto-fill, 30rem);
+  grid-template-columns: repeat(auto-fill, 40rem);
+  justify-content: center;
+  height: auto;
+  padding: 10px;
+  width: auto;
 }
 
-a{
-    color: var(--mrd2-orange);
-    font-family: Montserrat-VariableFont_wght;
-    font-size: 1.6rem;
-}
-
-.container-project {
-    display: grid;
-    gap: 1rem;
-    grid-auto-columns: 40rem;
-    grid-auto-rows: 30rem;
-    grid-template-rows: repeat(auto-fill, 30rem);
-    grid-template-columns: repeat(auto-fill, 40rem);
-    height: auto;
-    padding: 2rem;
-    width: auto;
-}
-
-.card-project{
-    align-items: center;
-    border: solid 0.2rem var(--mrd2-white);
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 30rem;
-    overflow: hidden;
-    padding: 2rem;
-    width: 40rem;
-}
-
-.card-project img{
-    border-radius: 0.8rem;
-    width: 100%;
-}
-
-.card-project div{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.card-project > div > h1{
-    color: var(--mrd2-yellow);
-    font-family: Montserrat-VariableFont_wght;
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-align: center;
-}
-
-.card-project > div > p{
-    color: var(--mrd2-white);
-    font-family: Montserrat-VariableFont_wght;
-    font-size: 1.1rem;
-    font-weight: 200;
-    text-align: center;
-}
-
-.card-project > div > a{
-    color: var(--mrd2-white);
-    cursor: pointer;
-    font-family: Montserrat-VariableFont_wght;
-    font-size: 1.1rem;
-    font-weight: 200;
-    text-align: center;
-    text-decoration: none;
-}
-
-.glassmorphism {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-}
-
-.card-project {
-  padding: 20px;
-  margin: 20px;
-  max-width: 350px;
-}
-
-.card-content {
+.card{
+  align-items: center;
+  background-color: #0D1326;
+  border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  height: 30rem;
+  position: relative;
+  width: 40rem;
 }
 
-.card-content img {
+.card img{
+  border-radius: var(--border-radius);
+  object-fit: cover;
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
 }
 
-.card-content h1 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+@property --angle{
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+
 }
 
-.card-content p {
-  margin-bottom: 15px;
+.card::after, .card::before{
+  animation: 3s spin linear infinite;
+  background-image: conic-gradient(from var(--angle), var(--color1), var(--color2), var(--color3), var(--color1));
+  border-radius: var(--border-radius);
+  content: '';
+  height: 100%;
+  left: 50%;
+  padding: 0.3rem;
+  position: absolute;
+  top: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  z-index: -1;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.3);
-  color: #000;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+.card::before{
+  filter: blur(0.9rem);
+  opacity: 0.5;
 }
 
-.btn:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+
+.neon-wavy-border {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-image: url('tu-imagen.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.neon-wavy-border::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+  border-radius: 15px;
+  z-index: -1;
+  filter: blur(15px);
+  animation: neonGlow 3s ease-in-out infinite, wavy 6s ease-in-out infinite;
+}
+
+@keyframes neonGlow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes wavy {
+  0%, 100% { 
+    border-radius: 15px 25px 15px 25px / 25px 15px 25px 15px;
+  }
+  50% { 
+    border-radius: 25px 15px 25px 15px / 15px 25px 15px 25px;
+  }
+}
+
+.neon-wavy-border img{
+  border-radius: 15px;
+  width: 300px;
+  height: 200px;
 }
