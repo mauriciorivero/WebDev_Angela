@@ -42,7 +42,10 @@ html{
 }
 
 body{
-    background-color: var(--mrd2-black);
+    background-image: url(../img/background3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--text-color);
     font-family: Montserrat-VariableFont_wght;
 }
