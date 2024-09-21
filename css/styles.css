@@ -42,7 +42,8 @@ html{
 }
 
 body{
-    background-image: url(../img/background3.jpg);
+    /*background-image: url(../img/background3.jpg);^*/
+    background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -126,7 +127,6 @@ main{
   syntax: '<angle>';
   initial-value: 0deg;
   inherits: false;
-
 }
 
 .card::after, .card::before{
@@ -162,7 +162,7 @@ main{
   position: relative;
   width: 300px;
   height: 200px;
-  background-image: url('tu-imagen.jpg');
+  background-image: url('');
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -194,10 +194,13 @@ main{
   50% { 
     border-radius: 25px 15px 25px 15px / 15px 25px 15px 25px;
   }
+  
 }
 
 .neon-wavy-border img{
-  border-radius: 15px;
+  border-radius: 1.3rem;
+  border: solid 0.3rem var(--glow-color);
   width: 300px;
   height: 200px;
+  object-fit: cover;
 }
