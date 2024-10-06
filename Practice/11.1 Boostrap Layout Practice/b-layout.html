@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <title>Boostrap Layout</title>
+    
+    <style>
+        h2{
+            text-align: left;
+        }
+
+        .container-mrd2{
+            border: solid 2px gray;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 4px;
+            width: 100vw;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h1">All the Boostrap container and break points</h1>
+    <div class="container container-mrd2">
+        <h2 class="h2" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">This is the standar</h1>
+    </div>
+    <div class="container-sm container-mrd2">
+        <h2 class="h2" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">This is the SM</h1>
+    </div>
+    <div class="container-md container-mrd2">
+        <h2 class="h2" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">This is the MD</h1>
+    </div>
+    <div class="container-lg container-mrd2">
+        <h2 class="h2" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">This is the LG</h1>
+    </div>
+    <div class="container-xl container-mrd2">
+        <h2 class="h2" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">This is the XL</h1>
+    </div>
+    <div class="container-xxl container-mrd2">
+        <h2 class="h2" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">This is the XXL</h1>
+    </div>
+    <div class="container-fluid container-mrd2">
+        <h2 class="h2" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">This is the FLUID</h1>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+</body>
+</html>
