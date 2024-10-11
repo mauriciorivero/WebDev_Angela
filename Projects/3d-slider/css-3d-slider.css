@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-image: url('./img/bg.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.banner{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.banner .slider{
+    animation: autoRun 20s linear infinite;
+    height: 250px;
+    left: calc(50% - 100px);
+    position: absolute;
+    top: 10%;
+    transform: perspective(1000px);
+    transform-style: preserve-3d;
+    width: 200px;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+    to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    inset: 0 0 0 0;
+    position: absolute;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+}
+
+.banner .slider .item img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.banner .content{
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: max-content;
+    left: 50%;
+    padding-bottom: 100px;
+    position: absolute;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+}
+
+.banner .model{
+    background-image: url(img/model.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 130%;
+    bottom: 0;
+    height: 75vh;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
