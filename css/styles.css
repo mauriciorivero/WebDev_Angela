@@ -86,12 +86,12 @@ header{
   z-index: 3;
 }
 
-#planet1 { background-image: url('../img/bokeh/bluey.png'); }
-#planet2 { background-image: url('../img/bokeh/greeny.png'); }
-#planet3 { background-image: url('../img/bokeh/orangey.png'); }
-#planet4 { background-image: url('../img/bokeh/purpley.png'); }
-#planet5 { background-image: url('../img/bokeh/bluey.png'); }
-#planet6 { background-image: url('../img/bokeh/greeny.png'); }
+.planet1 { background-image: url('../img/bokeh/bluey.png'); }
+.planet2 { background-image: url('../img/bokeh/greeny.png'); }
+.planet3 { background-image: url('../img/bokeh/orangey.png'); }
+.planet4 { background-image: url('../img/bokeh/purpley.png'); }
+.planet5 { background-image: url('../img/bokeh/bluey.png'); }
+.planet6 { background-image: url('../img/bokeh/greeny.png'); }
 
 main{
   display: grid;
