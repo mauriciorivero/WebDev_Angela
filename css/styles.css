@@ -80,8 +80,9 @@ header{
   height: 20rem;
   background-size: cover;
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-  will-change: transform;
+  pointer-events: none;
   transition: transform 0.1s ease-out;
+  will-change: transform;
   z-index: 3;
 }
 
